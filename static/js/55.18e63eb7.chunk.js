@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcar_rental_site=self.webpackChunkcar_rental_site||[]).push([[55],{55:function(e,t,r){r.r(t),r.d(t,{default:function(){return c}});var n=r(87),a=r(184);function c(){return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)("div",{children:"FavouritePage"}),(0,a.jsx)(n.rU,{to:"/catalog",children:"To look throw the catalog"})]})}}}]);
+//# sourceMappingURL=55.18e63eb7.chunk.js.map
