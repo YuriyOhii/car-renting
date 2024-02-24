@@ -1,3 +1,7 @@
 export const Filters = () => {
-    return <><div>Filters</div></>
-}
+  return (
+    <>
+      <div>Filters</div>
+    </>
+  );
+};
