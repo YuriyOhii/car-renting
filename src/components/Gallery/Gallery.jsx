@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { fetchCars } from '../../redux/cars/operations';
 import { Card } from '../Card/Card';
 
-export const Gallery = () => {
+export const Gallery = ({ items }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCars());
