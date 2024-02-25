@@ -3,16 +3,21 @@ import { useState } from 'react';
 
 import { ExtraInfo } from '../ExtraInfo/ExtraInfo';
 import { customStyles } from './Card.styled';
+import { useDispatch } from 'react-redux';
+import { setFavourite } from '../../redux/favourite/favouriteSlice';
 
 export const Card = ({ car }) => {
+  const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const closeModal = () => setIsModalOpen(false);
   const openModal = () => setIsModalOpen(true);
 
   return (
     <>
-      <button>favourite</button>
-      <img src={car.img} alt="Car photo" />
+      <button type="button" onClick={() => dispatch(setFavourite(car.id))}>
+        favourite
+      </button>
+      <img src={car.img} alt="Car" />
       <div>
         <h2>
           {car.make}

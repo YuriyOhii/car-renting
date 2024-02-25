@@ -1,5 +1,7 @@
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { setFilters } from '../../redux/filters/filtersSlice';
 
 const initialValues = {
   brand: '',
@@ -13,12 +15,12 @@ const schema = Yup.object({
   mileage: Yup.number(),
 });
 
-const onSubmit = (values, { resetForm }) => {
-  console.log(values);
-  resetForm();
-};
-
 export const Filters = () => {
+  const dispatch = useDispatch();
+  const onSubmit = (values, { resetForm }) => {
+    dispatch(setFilters(values));
+    resetForm();
+  };
   return (
     <>
       <Formik
